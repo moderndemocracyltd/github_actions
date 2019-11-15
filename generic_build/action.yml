@@ -16,4 +16,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.working-directory }} ${{inputs.package-name}} ${{inputs.build-number}}
+    - ${{ inputs.working-directory }}
+    - ${{ inputs.package-name }} 
+    - ${{ inputs.build-number }}
