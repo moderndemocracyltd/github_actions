@@ -1,12 +1,19 @@
 # action.yml
-name: 'Hello World'
+name: 'Package and Publish a SAM Application to Serverless Application Repository'
 description: 'Greet someone and record the time'
 inputs:
   working-directory:
     description: 'Directory of SAM application'
     required: true
+    default: './'
+  package-name:
+    description: 'Package name for SAM Repo'
+    required: true
+  build-number:
+    description: 'Build Number for SAM Repo'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.working-directory }}
+    - ${{ inputs.working-directory }} ${{inputs.package-name}} ${{inputs.build-number}}
