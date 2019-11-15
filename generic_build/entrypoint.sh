@@ -1,4 +1,6 @@
 #!/bin/sh
+pwd
+ls
 echo "Working Directory: $1"
 echo "Package Name: $2"
 echo "Build Number: $3"
