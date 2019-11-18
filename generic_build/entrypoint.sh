@@ -5,7 +5,7 @@ echo "Working Directory: $1"
 echo "Package Name: $2"
 echo "Build Number: $3"
 cd $1
-echo "registry=https://npm.pkg.github.com/:_authToken=$GITHUB_TOKEN" > .npmrc
+echo "registry=https://npm.pkg.github.com/moderndemocracyltd" > .npmrc
 ls
 cat .npmrc
 npm install
